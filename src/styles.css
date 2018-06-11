@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+@import "~ag-grid/dist/styles/ag-grid.css";
+@import "~ag-grid/dist/styles/ag-theme-blue.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.ag-cell {
+    padding-left: 1px;
+    padding-right: 1px; 
+}
+.mat-form-field {
+    display: inherit;
+    position: absolute;
+    padding-bottom: 40px;
+}
+
+.mat-input-element {
+    margin-top: 1px;
+    padding-bottom: 40px;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-infix {
+    padding: inherit;
+}

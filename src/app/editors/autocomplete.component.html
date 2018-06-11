@@ -1,0 +1,25 @@
+<!-- <div class="container" tabindex="0">
+    <input
+        #group
+        id="input" 
+        style="width: 100%; padding-left: 10px" 
+        [(ngModel)]="currentValue" 
+        list="items" 
+        name="items" 
+        (keydown)="onKeyDown($event)">
+    <datalist id="items">
+        <option *ngFor='let value of paramValues' [value]='value'>
+            {{value}}
+        </option>
+    </datalist>
+</div> -->
+<div  tabindex="0" style="width: 100%" (keydown)="onKeyDown($event)">
+    <mat-form-field >
+        <input style="font-size: 16px;" #dropdown [(ngModel)]="currentValue"  type="text" matInput [formControl]="valueControl" [matAutocomplete]="auto">
+    </mat-form-field>
+    <mat-autocomplete #group #auto="matAutocomplete" >
+        <mat-option *ngFor="let value of paramValues" [value]='value'>
+            {{ value }}
+        </mat-option>
+    </mat-autocomplete>
+</div>
